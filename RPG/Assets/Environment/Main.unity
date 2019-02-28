@@ -4133,8 +4133,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1000163090}
-  offset: {x: 0, y: -2, z: 0}
+  offset: {x: 0, y: -0.62, z: -0.92}
+  zoomSpeed: 4
+  minZoom: 5
+  maxZoom: 15
   pitch: 2
+  yawSpeed: 100
 --- !u!4 &1730976881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4002246828333360, guid: a5b6531bd8601e34ea81fc1e43782119,

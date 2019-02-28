@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraController.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -107,8 +106,9 @@
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Environment\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\PlayerMotor.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerMotor.cs" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\Environment\PostProcessing\Resources\Shaders\Fog.shader" />
