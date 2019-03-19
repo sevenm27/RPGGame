@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerMotor))]
 public class PlayerController : MonoBehaviour
 {
+	public Interactable focus;
 
 	public LayerMask movementMask;
 
@@ -24,11 +25,42 @@ public class PlayerController : MonoBehaviour
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
 
+
+
 			if (Physics.Raycast(ray, out hit, 100, movementMask))
 			{
 				motor.MoveToPoint(hit.point);
+				RemoveFocus();
+			}	
+		}
+		//If we press right mouse
+		if (Input.GetMouseButtonDown(1))
+		{
+			//We create a ray 
+			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+			RaycastHit hit;
+			
+			//If the ray hits
+			if (Physics.Raycast(ray, out hit, 100))
+			{
+				Interactable interactable = hit.collider.GetComponent<Interactable>();
+				if (interactable != null)
+				{
+					SetFocus(interactable);
+				}
 			}
 		}
+	}
+	void SetFocus(Interactable newFocus)
+	{
+		focus = newFocus;
+		motor.FollowTarget(newFocus);
+	}
+
+	void RemoveFocus()
+	{
+		focus = null;
+		motor.StopFollowingTarget();
 	}
 }
 
