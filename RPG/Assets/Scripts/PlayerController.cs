@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 			{
 				motor.MoveToPoint(hit.point);
 				RemoveFocus();
-			}	
+			}
 		}
 		//If we press right mouse
 		if (Input.GetMouseButtonDown(1))
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 			//We create a ray 
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit;
-			
+
 			//If the ray hits
 			if (Physics.Raycast(ray, out hit, 100))
 			{
@@ -56,20 +56,24 @@ public class PlayerController : MonoBehaviour
 		if (newFocus != focus)
 		{
 			if (focus != null)
-			focus.OnDefocused();
-			
+				focus.OnDefocused();
+
+			focus = newFocus;
+			motor.FollowTarget(newFocus);
+
 		}
-		focus = newFocus;
 
 		newFocus.OnFocused(transform);
-		motor.FollowTarget(newFocus);
 	}
 
 	void RemoveFocus()
 	{
 		if (focus != null)
+		{
 			focus.OnDefocused();
-		focus.OnDefocused();
+		}
+		
+		//focus.OnDefocused();
 		focus = null;
 		motor.StopFollowingTarget();
 	}
