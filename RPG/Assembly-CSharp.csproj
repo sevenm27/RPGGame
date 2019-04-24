@@ -108,6 +108,7 @@
     <Compile Include="Assets\Environment\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\InventorySlot.cs" />
     <Compile Include="Assets\InventoryUI.cs" />
+    <Compile Include="Assets\Items\Equipment.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
