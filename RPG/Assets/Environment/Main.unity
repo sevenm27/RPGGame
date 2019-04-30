@@ -9377,7 +9377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 1524028986}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: d2256f1491b565a438380a0338462ad3, type: 2}
 --- !u!65 &1524028983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10161,7 +10161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   interactionTransform: {fileID: 1606229564}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 0b3da289554a1754584ca7cd8b8d0f82, type: 2}
 --- !u!65 &1606229561
 BoxCollider:
   m_ObjectHideFlags: 0

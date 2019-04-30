@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05045c3989f9f3044b86e0a9e2fb1b80, type: 3}
   m_Name: Thunder Lord Helmet
   m_EditorClassIdentifier: 
-  name: New Item
+  name: Thunder Lord Helmet
   icon: {fileID: 0}
   isDefaultItem: 0
